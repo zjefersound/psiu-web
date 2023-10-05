@@ -15,5 +15,7 @@ namespace PSIUWeb.Data
 
         public DbSet<Patient>? Patients { get; set; }
 
+        public DbSet<Psychologist>? Psychologists { get; set; }
+
     }
 }
