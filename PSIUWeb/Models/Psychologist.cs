@@ -19,7 +19,7 @@ namespace PSIUWeb.Models
 
         [Required(ErrorMessage = "O campo liberado é requerido.")]
         [Display(Name = "Liberado")]
-        public bool? IsAllowed { get; set; }
+        public Boolean? IsAllowed { get; set; }
 
         [ForeignKey("User")]
         public string? UserId { get; set; }
