@@ -12,8 +12,8 @@ using PSIUWeb.Data;
 namespace PSIUWeb.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231005201254_UpdatePsychologist")]
-    partial class UpdatePsychologist
+    [Migration("20231005230101_Psychologist")]
+    partial class Psychologist
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -280,10 +280,6 @@ namespace PSIUWeb.Migrations
                     b.Property<string>("Crp")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("IsAllowed")
-                        .IsRequired()
-                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()

@@ -19,6 +19,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // a cada requisi��o HTTP
 builder.Services.AddScoped<IPatientRepository, EFPatientRepository>();
 
+builder.Services.AddScoped<IPsychologistRepository, EFPsychologistRepository>();
+
+
 builder.Services.AddIdentity<AppUser, IdentityRole>( 
     options =>
     {

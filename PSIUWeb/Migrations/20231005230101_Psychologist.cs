@@ -16,7 +16,6 @@ namespace PSIUWeb.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Crp = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsAllowed = table.Column<bool>(type: "bit", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>

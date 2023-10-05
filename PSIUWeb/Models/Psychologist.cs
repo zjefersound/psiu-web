@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PSIUWeb.Models
 {
-
     public class Psychologist
     {
         [Key]
@@ -16,10 +15,6 @@ namespace PSIUWeb.Models
         [Required(ErrorMessage = "CRP requerido.")]
         [Display(Name = "CRP")]
         public string? Crp { get; set; }
-
-        [Required(ErrorMessage = "O campo liberado é requerido.")]
-        [Display(Name = "Liberado")]
-        public Boolean? IsAllowed { get; set; }
 
         [ForeignKey("User")]
         public string? UserId { get; set; }

@@ -2,7 +2,6 @@
 using PSIUWeb.Models;
 using System.Linq;
 
-
 namespace PSIUWeb.Data.EF
 {
     public class EFPsychologistRepository : IPsychologistRepository
@@ -13,7 +12,6 @@ namespace PSIUWeb.Data.EF
         {
             context = ctx;
         }
-
 
         public Psychologist? Create(Psychologist p)
         {
@@ -30,16 +28,6 @@ namespace PSIUWeb.Data.EF
             return p;
         }
 
-        public Psychologist? GetPsychologistById(int id)
-        {
-            Psychologist? p =
-                context
-                    .Psychologists?
-                    .Where(p => p.Id == id)
-                    .FirstOrDefault();
-            return p;
-        }
-
         public Psychologist? Delete(int id)
         {
             Psychologist? p = GetPsychologistById(id);
@@ -51,6 +39,20 @@ namespace PSIUWeb.Data.EF
             context.SaveChanges();
 
             return p;
+
+
+        }
+
+        public Psychologist? GetPsychologistById(int id)
+        {
+            Psychologist? p =
+                context
+                    .Psychologists?
+                    .Where(p => p.Id == id)
+                    .FirstOrDefault();
+
+            return p;
+
         }
 
         public IQueryable<Psychologist>? GetPsychologists()

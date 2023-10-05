@@ -42,20 +42,6 @@ namespace PSIUWeb.Data
 
                 context.SaveChanges();
             }
-
-            if (!context.Psychologists.Any())
-            {
-                context.Psychologists.AddRange(
-                    new Psychologist
-                    {
-                        Name = "Jeferson Souza",
-                        Crp = "21312312",
-                        IsAllowed = true,
-                    }
-                );
-
-                context.SaveChanges();
-            }
         }
 
     }
