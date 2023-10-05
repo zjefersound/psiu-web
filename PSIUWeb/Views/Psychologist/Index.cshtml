@@ -22,7 +22,6 @@
                                     <th>@Html.DisplayNameFor(model => model.Id)</th>
                                     <th>@Html.DisplayNameFor(model => model.Name)</th>
                                     <th>@Html.DisplayNameFor(model => model.Crp)</th>
-                                    <th>@Html.DisplayNameFor(model => model.IsAllowed)</th>
                                     <th>Ações</th>
                                 </tr>
                             </thead>
@@ -33,7 +32,6 @@
                                         <td>@p.Id</td>
                                         <td>@p.Name</td>
                                         <td>@p.Crp</td>
-                                        <td>@(p.IsAllowed ? "Sim" : "Não")</td>
                                         <td>
                                             <div class="row">
                                                 <div class="col-6">
