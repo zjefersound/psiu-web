@@ -12,7 +12,7 @@ namespace PSIUWeb.Models
         public string HtmlContent { get; set; }
 
         public int PsicoId { get; set; }
-        [ForeignKey("PsicoId")]
+        [ForeignKey("PsychologistId")]
         public Psychologist Psychologist { get; set; }
 
         public List<ContentCategory> ContentCategories { get; set; }
